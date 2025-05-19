@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import ThemeContext from "../Components/ThemeContext";
+import Skills from "../Components/Skills";
 
 const AboutMe = () => {
   const { theme } = useContext(ThemeContext);
@@ -79,13 +80,17 @@ const AboutMe = () => {
           </div>
 
           <p className="text-justify montserrat leading-relaxed">
-            I'm a dedicated Software Engineer with hands-on experience in
-            building scalable backend systems and AI-integrated applications.
-            I've contributed to health tech and ed-tech products using Python,
-            Django, FastAPI, and modern cloud tools. Passionate about GenAI,
-            data-driven solutions, and full-stack development, I thrive in
-            fast-paced, collaborative environments where innovation and impact
-            matter most.
+            Versatile Fullstack Developer and Freelance Technical Trainer with a
+            strong foundation in full-stack development, AI/ML, and data
+            science. Experienced in building scalable solutions using Python,
+            Django, Angular, and modern cloud technologies. Delivered impactful
+            training sessions to 8000+ learners across Deutsche Bank, Infosys,
+            and OpenProject freelance engagements—specializing in Python,
+            software development, and project management tools. Passionate about
+            solving complex challenges, ranked 2nd in “TechnoMate Hackathon,”
+            and have solved 150+ coding problems. Lifelong learner, driven to
+            create meaningful impact through innovation, collaboration, and
+            continuous growth.
           </p>
 
           {/* Action Buttons */}
@@ -119,6 +124,8 @@ const AboutMe = () => {
           </div>
         </motion.div>
       </div>
+      {/* Skills Section */}
+      <Skills />
     </section>
   );
 };

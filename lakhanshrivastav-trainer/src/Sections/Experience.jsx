@@ -36,7 +36,7 @@ const Experience = () => {
       </motion.div>
 
       {/* Experience Cards */}
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-left gap-6">
         {experiences.map((experience, index) => (
           <motion.div
             key={index}

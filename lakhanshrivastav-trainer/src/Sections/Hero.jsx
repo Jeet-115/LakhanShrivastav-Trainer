@@ -4,20 +4,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import facilitateImages from "../data/facilitate";
 
 const Hero = () => {
-  const typedRef = useRef(null);
+  const lgtypedRef = useRef(null);
+  const smmdtypedRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const typed = new Typed(typedRef.current, {
+    const lgtyped = new Typed(lgtypedRef.current, {
       strings: [
+        "Tech Trainer | Trained 8000+ Students",
+        "AI/ML & Data Science Enthusiast",
         "Full Stack Developer | Python, Django, Angular",
-        "GenAI Health App Developer | OpenAI & LLaMA",
-        "LMS Architect | Django, Zoom Integration, Automation",
-        "Data Science & Visualization Enthusiast",
-        "FastAPI, Docker, Kubernetes | Backend Pro",
-        "BBPS Developer | Django, Angular, REST APIs",
-        "Cloud Experience | Azure, AWS-S3, GCP, MinIO",
-        "DSA & System Design Learner | Problem Solver",
+        "GenAI Health App Creator using OpenAI & LLaMA",
+        "Hackathon Winner | 150+ Problems Solved",
+        "DSA, FastAPI, Docker, Kubernetes Enthusiast",
+        "Lifelong Learner | Innovation Driven",
+        "Freelancer | LMS & Enterprise Solutions Builder",
       ],
       typeSpeed: 40,
       backSpeed: 20,
@@ -25,13 +26,34 @@ const Hero = () => {
       loop: true,
     });
 
-    return () => typed.destroy();
+    return () => lgtyped.destroy();
+  }, []);
+
+  useEffect(() => {
+    const smmdtyped = new Typed(smmdtypedRef.current, {
+      strings: [
+        "Tech Trainer | Trained 8000+ Students",
+        "AI/ML & Data Science Enthusiast",
+        "Full Stack Developer | Python, Django, Angular",
+        "GenAI Health App Creator using OpenAI & LLaMA",
+        "Hackathon Winner | 150+ Problems Solved",
+        "DSA, FastAPI, Docker, Kubernetes Enthusiast",
+        "Lifelong Learner | Innovation Driven",
+        "Freelancer | LMS & Enterprise Solutions Builder",
+      ],
+      typeSpeed: 40,
+      backSpeed: 20,
+      backDelay: 1000,
+      loop: true,
+    });
+
+    return () => smmdtyped.destroy();
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % facilitateImages.length);
-    }, 2000); // switch every 2 seconds
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -71,46 +93,40 @@ const Hero = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.5 }}
         variants={popupVariants}
-        className="max-w-6xl pt-4 mx-auto flex flex-col md:flex-row items-center justify-between gap-10 backdrop-blur-md rounded-xl dark:shadow-gray-400/50 shadow-xl shadow-black/60  bg-gray-400/50 dark:bg-black"
+        className="hidden max-w-7xl mx-auto lg:flex lg:flex-row items-start justify-between gap-8 bg-gray-400/50 dark:bg-black backdrop-blur-md rounded-xl shadow-xl dark:shadow-gray-400/50 p-6"
       >
         {/* Left: Profile Image */}
         <motion.div
-          className="w-full md:w-1/2 h-72 md:h-full"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          className="lg:w-[40%] flex justify-start"
           variants={popupVariants}
         >
           <img
             src="/profile/profilebg.png"
             alt="Lakhan Shrivastav"
-            className="w-full lg:h-[600px] md:h-[500px] h-[300px] object-contain object-center rounded-xl drop-shadow-md dark:drop-shadow-emerald-300"
+            className="w-full h-full max-h-[600px] object-contain object-center rounded-xl drop-shadow-md dark:drop-shadow-emerald-300"
           />
         </motion.div>
 
-        {/* Right: Hero Text */}
+        {/* Right: Text and Rotating Images */}
         <motion.div
-          className="w-full md:w-1/2 text-center md:text-left"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          className="lg:w-[60%] flex flex-col justify-start items-start"
           variants={popupVariants}
         >
-          <h1 className="md:text-4xl text-xl font-bold outfit text-gray-900 dark:text-white mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold outfit text-gray-900 dark:text-white mb-2">
             Lakhan Shrivastav
           </h1>
-          <p className="md:text-xl text-md pb-4 inter text-gray-700 dark:text-gray-300">
-            <span className="typed" ref={typedRef} />
+          <p className="lg:text-xl inter text-gray-700 dark:text-gray-300 lg:mb-20">
+            <span className="typed" ref={lgtypedRef} />
           </p>
 
           {/* Rotating Image Animation */}
-          <div className="relative w-full h-40 mt-4 overflow-hidden rounded-lg mb-4">
+          <div className="relative w-full lg:h-80 overflow-hidden rounded-lg">
             <AnimatePresence>
               <motion.img
                 key={facilitateImages[currentIndex]}
                 src={facilitateImages[currentIndex]}
                 alt="Facilitate Visual"
-                className="absolute w-full h-full object-contain object-left rounded-2xl px-4 md:px-0"
+                className="absolute w-full h-full object-contain object-left rounded-2xl"
                 variants={imageVariants}
                 initial="enter"
                 animate="center"
@@ -119,6 +135,52 @@ const Hero = () => {
             </AnimatePresence>
           </div>
         </motion.div>
+      </motion.div>
+      {/* Mobile / Tablet Layout */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.5 }}
+        variants={popupVariants}
+        className="flex lg:hidden flex-col max-w-4xl mx-auto gap-6"
+      >
+        {/* Top: Image Left + Text Right */}
+        <div className="flex flex-row gap-4 bg-gray-400/50 dark:bg-black backdrop-blur-md rounded-xl shadow-xl dark:shadow-gray-400/50 p-6">
+          {/* Left 30% Image */}
+          <div className="w-[30%]">
+            <img
+              src="/profile/profilebg.png"
+              alt="Lakhan Shrivastav"
+              className="w-full h-full object-contain rounded-xl drop-shadow-md dark:drop-shadow-emerald-300"
+            />
+          </div>
+
+          {/* Right 70% Text */}
+          <div className="w-[70%] flex flex-col justify-center md:items-center">
+            <h1 className="text-xl sm:text-2xl font-bold outfit text-gray-900 dark:text-white mb-1">
+              Lakhan Shrivastav
+            </h1>
+            <p className="text-sm sm:text-md inter text-gray-700 dark:text-gray-300">
+              <span className="typed" ref={smmdtypedRef} />
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom: Full Width Sliding Image */}
+        <div className="relative w-full h-64 sm:h-72 overflow-hidden rounded-lg">
+          <AnimatePresence>
+            <motion.img
+              key={facilitateImages[currentIndex]}
+              src={facilitateImages[currentIndex]}
+              alt="Facilitate Visual"
+              className="absolute w-full h-full object-contain object-center rounded-2xl"
+              variants={imageVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+            />
+          </AnimatePresence>
+        </div>
       </motion.div>
     </section>
   );

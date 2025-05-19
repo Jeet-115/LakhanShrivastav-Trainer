@@ -6,8 +6,8 @@ import Hero from "../Sections/Hero";
 // import Projects from "../Sections/Projects";
 import Contact from "../Sections/Contact";
 import ThemeContext from "../Components/ThemeContext";
-import Skills from "../Sections/Skills";
 import Experience from "../Sections/Experience";
+import ProfessionalHighlights from "../Sections/ProfessionalHighlights";
 
 const Home = () => {
 
@@ -20,10 +20,10 @@ const Home = () => {
       <div className="p-5">
         {/* Hero Section */}
         <Hero />
+        {/* Professional Highlights Section */}
+        <ProfessionalHighlights />
         {/* AboutMe Section */}
         <AboutMe />
-        {/* Skills Section */}
-        <Skills />
         {/* Experience Section */}
         <Experience />
         {/* Certifications Section */}

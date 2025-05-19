@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { motion } from "framer-motion";
 import skills from "../data/skillsData";
-import ThemeContext from "../Components/ThemeContext";
+import ThemeContext from "./ThemeContext";
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState("Programming Languages");

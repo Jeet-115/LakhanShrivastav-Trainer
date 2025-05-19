@@ -23,8 +23,8 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", href: "hero" },
+    { name: "Highlights", href: "highlights" },
     { name: "About Me", href: "aboutme" },
-    { name: "Skills", href: "skills" },
     { name: "Experience", href: "experience" },
     // { name: "Certifications", href: "certi" },
     // { name: "Projects", href: "projects" },
@@ -76,7 +76,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Left: Title */}
-        <div className="lg:text-lg md:text-[16px] text-sm font-bold">Full Stack Developer | Python & GenAI Specialist</div>
+        <div className="lg:text-lg md:text-[16px] text-sm font-bold">Software Engineer | Traineer</div>
 
         {/* Right: Links for Laptop Screens */}
         <ul className="hidden md:flex space-x-8 relative lg:text-[16px] md:text-sm text-[12px]">

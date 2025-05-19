@@ -1,32 +1,44 @@
 const experiences = [
   {
-    title: "Python Consultant-Backend Developer",
-    company: "Startup Projects",
-    location: "India",
-    date: "Feb 2025 - Present",
+    title: "Java Consultant & Backend Developer",
+    company: "Freelancer",
+    location: "Pune, India",
+    date: "2025 - Present",
     points: [
-      "Developed a GenAI-powered health tracking application using OpenAI and LLaMA models to analyze patient data and generate health reports and recommendations.",
-      "Designed and implemented a Django-based Learning Management System (LMS) with roles for moderators, instructors, and students, including Zoom integration and automatic class recording storage.",
+      "Developed a healthcare management system for scheduling appointments, tracking patient records, and sending SMS notifications via Twilio API.",
+      "Utilized Java, Spring Boot, Hibernate, and PostgreSQL as the core backend stack.",
+      "Implemented containerization with Docker and deployed the system using Kubernetes on Google Cloud Platform (GCP).",
+    ],
+  },
+  {
+    title: "LMS Architect – Java Spring Boot",
+    company: "Freelancer",
+    location: "Pune, India",
+    date: "2024 - 2025",
+    points: [
+      "Built a comprehensive Learning Management System (LMS) using Java Spring Boot and Spring Security with JWT authentication.",
+      "Used Hibernate and PostgreSQL for backend data management.",
+      "Optional frontend using Thymeleaf or React/Angular; deployed using Docker and Kubernetes on AWS.",
     ],
   },
   {
     title: "Software Engineer",
     company: "Inteliment / Rubiscape",
     location: "Pune, India",
-    date: "",
+    date: "2023 - 2024",
     points: [
-      "Worked on a product focused on Data Science, Data Visualization, and Modeling.",
-      "Simplified data science processes for seamless data connection, analysis, and model deployment.",
+      "Contributed to a data science product focused on data visualization, modeling, and analysis.",
+      "Simplified data workflows using Python, Django, Angular, and PostgreSQL.",
     ],
   },
   {
     title: "Software Developer Intern",
     company: "Rhythmflows Solutions",
     location: "Pune, India",
-    date: "",
+    date: "2022",
     points: [
       "Worked as a Full Stack Developer on Bharat Bill Payment System (BBPS), India's integrated bill payment platform.",
-      "Used Python, Django, Angular, and integrated REST APIs with FastAPI for scalable solutions.",
+      "Utilized Python, Django, Angular, and integrated REST APIs using FastAPI for scalable architecture.",
     ],
   },
 ];
