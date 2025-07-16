@@ -1,6 +1,6 @@
 const experiences = [
   {
-    title: "Java Consultant & Backend Developer",
+    title: "Python Consultant & Backend Developer",
     company: "Freelancer",
     location: "Pune, India",
     date: "2025 - Present",
